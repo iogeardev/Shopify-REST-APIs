@@ -3,7 +3,7 @@
 This repository contains **Shopify API integrations (GET-only)**
 used for data extraction and reporting into Power BI.
 
-Although named `Rest-API`, the repository includes:
+The repository includes:
 - Shopify GraphQL Admin API
 - Shopify GraphQL Bulk Operations
 - ShopifyQL (analytics queries)
