@@ -1,4 +1,4 @@
-# Rest-API
+# Rest-APIs
 
 This repository contains **Shopify API integrations (GET-only)**
 used for data extraction and reporting into Power BI.
