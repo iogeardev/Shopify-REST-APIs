@@ -1,0 +1,66 @@
+### `scripts/shopify_bulk_inventory.graphql`
+```graphql
+mutation {
+  bulkOperationRunQuery(
+    query: """
+    {
+      productVariants(first: 250) {
+        edges {
+          node {
+            id
+            sku
+            barcode
+            title
+            product {
+              id
+              title
+              handle
+              vendor
+              status
+            }
+            inventoryItem {
+              id
+              tracked
+              inventoryLevels(first: 250) {
+                edges {
+                  node {
+                    location {
+                      id
+                      name
+                    }
+                    quantities(
+                      names: [
+                        "available"
+                        "on_hand"
+                        "incoming"
+                        "committed"
+                        "reserved"
+                        "damaged"
+                        "safety_stock"
+                        "quality_control"
+                      ]
+                    ) {
+                      name
+                      quantity
+                      updatedAt
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    """
+  ) {
+    bulkOperation {
+      id
+      status
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}
