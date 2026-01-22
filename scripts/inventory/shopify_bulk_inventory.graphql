@@ -1,4 +1,3 @@
-### `scripts/shopify_bulk_inventory.graphql`
 ```graphql
 mutation {
   bulkOperationRunQuery(
