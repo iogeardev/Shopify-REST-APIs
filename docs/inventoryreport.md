@@ -48,19 +48,3 @@ States currently requested:
 API Version: `2026-01`
 
 ---
-
-## Step 1: Discover inventory quantity names
-
-GraphQL query:
-```graphql
-query {
-  inventoryProperties {
-    quantityNames(first: 50) {
-      edges {
-        node {
-          name
-        }
-      }
-    }
-  }
-}
